@@ -78,6 +78,21 @@
         <a class="side-link disabled"><i class="bi bi-door-closed"></i> Master Kamar</a>
         <a class="side-link disabled"><i class="bi bi-people"></i> Data Penghuni</a>
         <a class="side-link disabled"><i class="bi bi-box-seam"></i> Inventaris Aset</a>
+        <div style="position:absolute; bottom:1.5rem; left:1rem; right:1rem;">
+        <div class="d-flex align-items-center gap-2 mb-2 px-2">
+            <div class="avatar">{{ strtoupper(substr(auth()->user()->name, 0, 1)) }}</div>
+            <div class="lh-sm">
+                <div class="fw-semibold small">{{ auth()->user()->name }}</div>
+                <div class="text-secondary" style="font-size:.75rem">{{ ucfirst(auth()->user()->role) }}</div>
+            </div>
+        </div>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="btn btn-outline-secondary btn-sm w-100">
+                <i class="bi bi-box-arrow-right me-1"></i> Keluar
+            </button>
+        </form>
+    </div>
     </aside>
 
     <main class="main">

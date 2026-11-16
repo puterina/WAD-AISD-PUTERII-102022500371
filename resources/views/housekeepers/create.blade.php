@@ -8,7 +8,7 @@
     @csrf
     @include('housekeepers._form')
     <div>
-        <button class="btn btn-primary">Simpan</button>
+        <button class="btn btn-brand">Simpan</button>
         <a href="{{ route('housekeepers.index') }}" class="btn btn-secondary">Batal</a>
     </div>
 </form>
